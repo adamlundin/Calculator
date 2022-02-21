@@ -2,34 +2,39 @@
 {
     public class Messages
     {
+        /// <summary>
+        /// Depending on what operator the user used the text will be different
+        /// </summary>
+        /// <param name="input">user input operator</param>
         public void StateNumber(string input)
         {
-            Console.ForegroundColor = ConsoleColor.Blue;
             switch (input)
             {
-                // between ±1.0 x 10^-28 to ±7.9228 x 10^28
                 case "+":
-                    Console.WriteLine("Type in TWO terms(on at a time):"); // difference
+                    Text("Type in TWO terms (one at a time):", ConsoleColor.Blue);
                     break;
                 case "-":
-                    Console.WriteLine("Type in TWO terms (on at a time):"); // sum
+                    Text("Type in TWO terms (one at a time):", ConsoleColor.Blue);
                     break;
                 case "*":
-                    Console.WriteLine("Type in TWO factors (on at a time):"); // produkt
+                    Text("Type in TWO factors (one at a time):", ConsoleColor.Blue);
                     break;
                 case "/":
-                    Console.WriteLine("Type a numerator followed by a denominator:"); // quota
+                    Text("Type a numerator followed by a denominator:", ConsoleColor.Blue);
                     break;
                 case "c":
-                    Console.WriteLine("Type a °F:");
+                    Text("Type a °F:", ConsoleColor.Blue);
                     break;
                 case "f":
-                    Console.WriteLine("Type a °C:");
+                    Text("Type a °C:", ConsoleColor.Blue);
                     break;
             }
-            Console.ResetColor();
         }
-
+        /// <summary>
+        /// Sets the color of the console text
+        /// </summary>
+        /// <param name="input">Text that should be colord</param>
+        /// <param name="color">Clor of the text</param>
         public void Text(string input, ConsoleColor color)
         {
             Console.ForegroundColor = color;

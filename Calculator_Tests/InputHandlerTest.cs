@@ -22,15 +22,15 @@ namespace Calculator_Tests
         [InlineData("/")]
         [InlineData("c")]
         [InlineData("f")]
-        
         public void ControlInputTest(string input)
         {
             Assert.True(inputHandler.ControlInput(input));
         }
+
         [Theory]
-        [InlineData("?")]   //
-        [InlineData("5")]   // TODO: should they be here?
-        [InlineData("d")]   //
+        [InlineData("?")]
+        [InlineData("5")]
+        [InlineData("d")]
         public void ControlInputTest2(string input)
         {
             Assert.False(inputHandler.ControlInput(input));

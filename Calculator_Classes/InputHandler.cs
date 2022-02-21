@@ -17,13 +17,12 @@
                  op = Console.ReadLine();
 #pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
 
-                if (CheckSpecialOperation(op))                 // CAN YOU MAKE THIS DISEPEAR OR YOU HAVE TO HAVE THE SAME IF 2 TIMES?
+                if (CheckSpecialOperation(op))
                     continue;
                 else
                 {
-                    bool pursue;
-                    pursue = ControlInput(op);
-                    if (pursue)
+                    bool isValidInput = ControlInput(op);
+                    if (isValidInput)
                     {
                         break;
                     }
@@ -41,7 +40,7 @@
         /// </summary>
         /// <param name="input">Input from the user</param>
         /// <returns></returns>
-        public bool CheckSpecialOperation(string input)
+        public bool CheckSpecialOperation(string input) // Could have been private but i have choosen to test it
         {
             if (string.IsNullOrEmpty(input))
             {
@@ -68,10 +67,11 @@
         /// </summary>
         /// <param name="input">Input from the user</param>
         /// <returns></returns>
-        public bool ControlInput(string input)
+        public bool ControlInput(string input) // Could have been private but i have choosen to test it
         {
             
             // Tried to use Enum but wont work sense you cant have special chars in an enum
+            // then thought about Dictionary but after consideration desided its not super neccesary for sutch a little projekt
             if (input == "+" || input == "-" || input == "*" || input == "/" || input == "c" || input == "f")
             {
                 return true;
@@ -97,18 +97,17 @@
                 string input = Console.ReadLine();
 #pragma warning restore CS8600
 
-                if (CheckSpecialOperation(input))                 // CAN YOU MAKE THIS DISEPEAR OR YOU HAVE TO HAVE THE SAME IF 2 TIMES?
+                if (CheckSpecialOperation(input))
                     continue;
                 else
                 {
-                    bool number;
-                    number = decimal.TryParse(input, out inputDecimal);
-                    // Makes sure that you cant divide by 0
+                    bool isNumber = decimal.TryParse(input, out inputDecimal);
+                    // Makes sure you cant divide by 0
                     if (op == "/" && secondOperand && inputDecimal == 0)
                     {
                         message.Text("You can't divide by 0 try again:", ConsoleColor.Red);
                     }
-                    else if (number)
+                    else if (isNumber)
                     {
                         break;
                     }

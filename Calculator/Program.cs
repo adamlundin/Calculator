@@ -56,9 +56,5 @@ namespace Calculator
         }
     }
     // TODO: om x = 69 rickroll?
-    // TDOD: fixa tester
-    // TODO: fixa klass för operatorer (Fråga Alex)
-    // TODO: gör så att +, -, /, *, f, c, är Char (Fråga Alex)
-    // TODO: kan man fixa så att man inte behöver ha "string.IsNullOrEmpty()" två gånger (Fråga Alex)
-    // TODO: vill du att det ska finnas ett speciellt meddelande för att talet är för stort (Fråga Alex)
+    // TODO: gör så att +, -, /, *, f, c, är Char (ENUM?)
 }
