@@ -16,6 +16,7 @@ namespace Calculator
             message.Text("or type QUIT at any time to close the aplication", ConsoleColor.Blue);
 
             InputHandler inputHandler = new InputHandler();
+            // Considered using char, but i started with a string (stupidly enough) so decided that it wont make to mutch of a difference
             string op; // Operator
             string ecuation;
             decimal ecuals;
@@ -56,5 +57,4 @@ namespace Calculator
         }
     }
     // TODO: om x = 69 rickroll?
-    // TODO: gör så att +, -, /, *, f, c, är Char (ENUM?)
 }

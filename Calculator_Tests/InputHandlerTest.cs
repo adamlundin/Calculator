@@ -1,5 +1,6 @@
 ﻿using Xunit;
 using Calculator_Classes;
+using System.Collections.Generic;
 
 namespace Calculator_Tests
 {
