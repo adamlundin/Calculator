@@ -12,7 +12,7 @@
         public (string, decimal) Calculating(string op, decimal firstNumber, decimal secondNumber = 0)
         {
             decimal ecuals = 0;
-            string textOutput = "HOW DID YOU GET HERE?";
+            string textOutput = "HOW DID YOU GET HERE? (Sheck switch at row 16 at Calculate.cs)";
             switch (op)
             {
                 case "+":

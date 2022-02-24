@@ -17,6 +17,8 @@
                  op = Console.ReadLine();
 #pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
 
+                // Doing a Null check inside CheckSpecialOperation()
+                // becuse im allsow calling CheckSpecialOperation() inside ReadNumber()
                 if (CheckSpecialOperation(op))
                     continue;
                 else
@@ -102,7 +104,7 @@
                 else
                 {
                     bool isNumber = decimal.TryParse(input, out inputDecimal);
-                    // Makes sure you cant divide by 0
+                    // Makes sure you cant divide by 0 thanks to secondOperand input
                     if (op == "/" && secondOperand && inputDecimal == 0)
                     {
                         message.Text("You can't divide by 0 try again:", ConsoleColor.Red);

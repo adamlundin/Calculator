@@ -6,6 +6,8 @@ namespace Calculator_Tests
     public class CalculateTest
     {
         Calculate calculate = new Calculate();
+        // Decided to test all different operator here just once becuse
+        // i test the different operators by them selfs bellow
         [Fact]
         public void CalculatingTest()
         {
@@ -15,7 +17,7 @@ namespace Calculator_Tests
             Assert.Equal(("768 / 32 = 24,000", 24), calculate.Calculating("/", 768, 32));
             Assert.Equal(("32°F = 0,0°C", 0), calculate.Calculating("c", 32));
             Assert.Equal(("0°C = 32,0°F", 32), calculate.Calculating("f", 0));
-            Assert.Equal(("HOW DID YOU GET HERE?", 0), calculate.Calculating("ö", 235643));
+            Assert.Equal(("HOW DID YOU GET HERE? (Sheck switch at row 16 at Calculate.cs)", 0), calculate.Calculating("ö", 235643));
         }
 
         [Theory]

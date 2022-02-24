@@ -39,12 +39,16 @@ namespace Calculator
                 else
                 {
                     firstNumber = inputHandler.ReadNumber(op);
+                    // Made it so that you can choose if its the second number so that i dident
+                    // have to make a completly new method just becuse you cant divide by 0
                     secondNumber = inputHandler.ReadNumber(op, true);
                     (ecuation, ecuals) = calculate.Calculating(op, firstNumber, secondNumber);
                 }
                 if (ecuals == 69)
                 {
-                    message.Text("RickRoll", ConsoleColor.Yellow);      // TODO: Make this a real Rick Roll
+                    // Tried to make this a real rickroll but wasent able to
+                    // so this will have to do (for now)
+                    message.Text("RickRoll", ConsoleColor.Yellow); 
                 }
                 message.Text(ecuation, ConsoleColor.Green);
 
@@ -56,5 +60,4 @@ namespace Calculator
             } while (true);
         }
     }
-    // TODO: om x = 69 rickroll?
 }
